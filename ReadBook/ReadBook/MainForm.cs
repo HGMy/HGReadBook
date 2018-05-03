@@ -10,8 +10,9 @@ using BookSeeker;
 
 namespace ReadBook
 {
-    public partial class MainForm : Form
+    internal partial class MainForm : Form
     {
+        
 
         private readonly BookManager bookMng = new BookManager();
 
@@ -23,7 +24,21 @@ namespace ReadBook
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            MainSetting.Read();
+
+            
+
+
             bookMng.Init();
+
+
+
+            ApplySetting();
+        }
+
+        private void ApplySetting()
+        {
+            
         }
     }
 }

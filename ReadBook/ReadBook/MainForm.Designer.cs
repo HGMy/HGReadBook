@@ -37,7 +37,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.bookWebBrowser = new System.Windows.Forms.WebBrowser();
             this.label1 = new System.Windows.Forms.Label();
-            this.chapterListBox = new System.Windows.Forms.ListBox();
+            this.chapterDataGridView = new System.Windows.Forms.DataGridView();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -47,6 +47,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chapterDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // toolBarPanel
@@ -126,8 +127,8 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.chapterDataGridView);
             this.splitContainer2.Panel2.Controls.Add(this.label1);
-            this.splitContainer2.Panel2.Controls.Add(this.chapterListBox);
             this.splitContainer2.Size = new System.Drawing.Size(724, 444);
             this.splitContainer2.SplitterDistance = 511;
             this.splitContainer2.TabIndex = 0;
@@ -150,17 +151,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "章节";
             // 
-            // chapterListBox
+            // chapterDataGridView
             // 
-            this.chapterListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chapterDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chapterListBox.FormattingEnabled = true;
-            this.chapterListBox.ItemHeight = 12;
-            this.chapterListBox.Location = new System.Drawing.Point(3, 17);
-            this.chapterListBox.Name = "chapterListBox";
-            this.chapterListBox.Size = new System.Drawing.Size(201, 412);
-            this.chapterListBox.TabIndex = 0;
+            this.chapterDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.chapterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.chapterDataGridView.Location = new System.Drawing.Point(3, 17);
+            this.chapterDataGridView.Name = "chapterDataGridView";
+            this.chapterDataGridView.RowTemplate.Height = 23;
+            this.chapterDataGridView.Size = new System.Drawing.Size(202, 422);
+            this.chapterDataGridView.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -184,6 +186,7 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chapterDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,9 +200,9 @@
         private System.Windows.Forms.TreeView bookTreeView;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.WebBrowser bookWebBrowser;
-        private System.Windows.Forms.ListBox chapterListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView chapterDataGridView;
     }
 }
 
